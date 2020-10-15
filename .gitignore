@@ -1,0 +1,3 @@
+autoload/plugged/*
+undodir/*.*
+general/node_modules
