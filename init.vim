@@ -10,7 +10,10 @@ source $HOME/.config/nvim/general/plugin-settings/nerdTree.vim
 " **** Rainbow
 source $HOME/.config/nvim/general/plugin-settings/rainbow.vim
 
-" good site to look at color themes http://colorswat.ch/
+" **** Airline Theme Setting
+source $HOME/.config/nvim/themes/airline.vim
+
+"" good site to look at color themes http://colorswat.ch/
 set t_Co=256
 set cursorline
 colorscheme dracula

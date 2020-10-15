@@ -29,6 +29,9 @@ Plug 'ryanoasis/vim-devicons'
 "" Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+"" AirLine
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 "" Coc language server for auto complete
 "" Other language server settings -> https://github.com/neoclide/coc.nvim/wiki/Language-servers
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
