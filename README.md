@@ -26,3 +26,5 @@
 ```bash
 mkdir undodir
 ```
+
+- Install NerdFonts (This will take a while) [repo instructions](https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts)
