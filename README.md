@@ -15,6 +15,10 @@
 
 - [Neo Vim Setup](https://github.com/awesome-streamers/awesome-streamerrc/tree/master/ThePrimeagen)
 
+### Susanna's friend
+
+- [VIMRC](https://github.com/devinrm/dotfiles/blob/trunk/config/nvim/init.vim)
+
 ## Setup
 
 - To use the `undodir` you need to run
