@@ -10,8 +10,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
 " Better Syntax Support
 Plug 'sheerun/vim-polyglot'
-" File Explorer
-Plug 'scrooloose/NERDTree'
 " Auto pairs for '(' '[' '{'
 Plug 'jiangmiao/auto-pairs'
 
@@ -24,7 +22,8 @@ Plug 'jaredgorski/spacecamp'
 Plug 'https://github.com/drewtempelmeyer/palenight.vim'
 "Plug 'https://github.com/bluz71/vim-moonfly-colors'
 Plug 'sonph/onehalf', {'rtf': 'vim/'}
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree' |
+            \ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 "" Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
