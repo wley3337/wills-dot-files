@@ -16,7 +16,7 @@ source $HOME/.config/nvim/themes/airline.vim
 "" good site to look at color themes http://colorswat.ch/
 set t_Co=256
 set cursorline
-colorscheme dracula
+colorscheme palenight
 
 "" Terminal Settings
 "" start terminal in insert mode

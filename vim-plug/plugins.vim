@@ -18,6 +18,7 @@ Plug 'mbbill/undotree'
 "" Theme
 Plug 'dracula/vim'
 Plug 'jaredgorski/spacecamp'
+Plug 'drewtempelmeyer/palenight.vim'
 
 Plug 'https://github.com/drewtempelmeyer/palenight.vim'
 "Plug 'https://github.com/bluz71/vim-moonfly-colors'
