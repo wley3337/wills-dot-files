@@ -13,6 +13,8 @@ Plug 'sheerun/vim-polyglot'
 " Auto pairs for '(' '[' '{'
 Plug 'jiangmiao/auto-pairs'
 
+"Tmux Plugin
+Plug 'christoomey/vim-tmux-navigator'
 "undo
 Plug 'mbbill/undotree'
 "" Theme
