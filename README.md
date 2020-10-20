@@ -1,6 +1,6 @@
 # NeoVim setup with sub folders/files for organization
 
-## References:
+## References
 
 ### ChrisAtMachine (followed their structure)
 
@@ -28,3 +28,6 @@ mkdir undodir
 ```
 
 - Install NerdFonts (This will take a while) [repo instructions](https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts)
+
+- Install tmux
+- in `~/.tmux.config` add source ~/.config/nvim/general/tmux.conf`
