@@ -13,6 +13,10 @@ source $HOME/.config/nvim/general/plugin-settings/rainbow.vim
 " **** Airline Theme Setting
 source $HOME/.config/nvim/themes/airline.vim
 
+"Language specific settings
+"ie: read svelte files as html
+sourc $HOME/.config/nvim/general/codingLanguageSettings.vim
+
 "" good site to look at color themes http://colorswat.ch/
 set t_Co=256
 set cursorline
