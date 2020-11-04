@@ -50,7 +50,7 @@ set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set updatetime=300                      " Faster completion
 set undodir=~/.config/nvim/undodir      " sets an undo directory
 set undofile                            " makes an undo file for everything that you do
-
+set clipboard=unnamed                   " sets clipboard to OS clipboard so anything yanked goes to that clipboard
 
 "" Theme config
 if (has("termguicolors"))
