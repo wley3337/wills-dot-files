@@ -31,3 +31,4 @@ mkdir undodir
 
 - Install tmux
 - in `~/.tmux.config` add source ~/.config/nvim/general/tmux.conf`
+- Followed [this talk](https://www.youtube.com/watch?v=5r6yzFEXajQ) with his [dot files](https://github.com/nicknisi/dotfiles)
