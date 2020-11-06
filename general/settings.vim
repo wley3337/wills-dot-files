@@ -1,7 +1,7 @@
 let g:mapleader = "\<Space>"            " set leader key
 syntax enable                           " Enables syntax highlighing
 
-"set autochdir                          " Your working directory will always be the same as your working directory
+set autochdir                          " Your working directory will always be the same as your working directory
 set autoindent                          " Good auto indent
 set background=dark                     " tell vim what the background color looks like
 set clipboard=unnamedplus               " Copy paste between vim and everything else
@@ -18,7 +18,9 @@ set hlsearch                            " Enable search highlighting
 set iskeyword+=-                      	" treat dash separated words as a word text object"
 set incsearch                           " incrimental search as you type
 set laststatus=0                        " Always display the status line
+set list listchars=tab:»·,trail:·,nbsp:· " Display extra whitespace
 set mouse=a                             " Enable your mouse
+set matchtime=0                         " Speed up escape after (){} chars
 set nobackup                            " This is recommended by coc
 "set noshowmode                          " We don't need to see things like -- INSERT -- anymore
 "set nowrap                              " Display long lines as just one line
@@ -50,7 +52,7 @@ set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set updatetime=300                      " Faster completion
 set undodir=~/.config/nvim/undodir      " sets an undo directory
 set undofile                            " makes an undo file for everything that you do
-set clipboard=unnamed                   " sets clipboard to OS clipboard so anything yanked goes to that clipboard
+set clipboard^=unnamedplus              " sets clipboard to OS clipboard so anything yanked goes to that clipboard
 
 "" Theme config
 if (has("termguicolors"))
