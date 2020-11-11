@@ -17,7 +17,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'christoomey/vim-tmux-navigator'
 "undo
 Plug 'mbbill/undotree'
-"" Theme
+" commentary
+Plug 'https://github.com/tpope/vim-commentary'
+" Theme
 Plug 'dracula/vim'
 Plug 'jaredgorski/spacecamp'
 Plug 'drewtempelmeyer/palenight.vim'

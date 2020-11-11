@@ -41,7 +41,9 @@ nnoremap <C-l> <C-w>l
 
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
-
+"" === commmentary ===
+nnoremap <C-\> :Commentary<CR>
+xnoremap <C-\> :Commentary<CR>
 "" Toggle
 nnoremap <silent> <leader>nt :NERDTreeToggle<CR>
 "" turn terminal to normal mode with escape
