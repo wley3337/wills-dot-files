@@ -6,13 +6,13 @@ let g:NERDTreeStatusline = ''
 let g:NERDTreeWinPos='right'
 
 let g:NERDTreeGitStatusIndicatorMapCustom = {
-                \ 'Modified'  :'✹',
+                \ 'Modified'  :'⍙',
                 \ 'Staged'    :'✚',
                 \ 'Untracked' :'✭',
                 \ 'Renamed'   :'➜',
                 \ 'Unmerged'  :'═',
                 \ 'Deleted'   :'✖',
-                \ 'Dirty'     :'✗',
+                \ 'Dirty'     :'∇',
                 \ 'Ignored'   :'☒',
                 \ 'Clean'     :'✔︎',
                 \ 'Unknown'   :'?',

@@ -48,7 +48,7 @@ set splitbelow                          " Horizontal splits will automatically b
 set splitright                          " Vertical splits will automatically be to the right
 set t_Co=256                            " Support 256 colors
 set tabstop=2                           " Insert 2 spaces for a tab
-set timeoutlen=0                      " By default timeoutlen is 1000 ms
+set timeoutlen=200                      " By default timeoutlen is 1000 ms
 set updatetime=300                      " Faster completion
 set undodir=~/.config/nvim/undodir      " sets an undo directory
 set undofile                            " makes an undo file for everything that you do
