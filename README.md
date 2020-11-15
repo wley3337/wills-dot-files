@@ -26,6 +26,7 @@
 ```bash
 mkdir undodir
 ```
+look at this for tmux setup: https://github.com/tmuxinator/tmuxinator
 
 - Install NerdFonts (This will take a while) [repo instructions](https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts)
 
