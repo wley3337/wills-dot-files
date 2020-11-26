@@ -22,6 +22,7 @@ set list listchars=tab:»·,trail:·,nbsp:· " Display extra whitespace
 set mouse=a                             " Enable your mouse
 set matchtime=0                         " Speed up escape after (){} chars
 set nobackup                            " This is recommended by coc
+set nohlsearch                          " Turns highlighting search off after hitting entier"
 "set noshowmode                          " We don't need to see things like -- INSERT -- anymore
 "set nowrap                              " Display long lines as just one line
 set noswapfile                          " removes swap file
