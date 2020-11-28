@@ -19,7 +19,7 @@ let g:airline_right_sep =   '  '
 " small version ''''
 
 " Switch to your current theme
-let g:airline_theme = 'palenight'
+let g:airline_theme = 'pop_punk'
 
 " Always show tabs
 set showtabline=2

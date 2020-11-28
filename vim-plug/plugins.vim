@@ -23,9 +23,15 @@ Plug 'https://github.com/tpope/vim-commentary'
 Plug 'dracula/vim'
 Plug 'jaredgorski/spacecamp'
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'bignimbus/pop-punk.vim' "pop-punk
+Plug 'ParamagicDev/vim-medic_chalk' "medic_chalk
+Plug 'https://github.com/cliuj/vim-dark-meadow' "dark-meadow
+Plug 'https://github.com/yuqio/vim-darkspace' "darkspace
+Plug 'https://github.com/drewtempelmeyer/palenight.vim' "palenight
 
-Plug 'https://github.com/drewtempelmeyer/palenight.vim'
-"Plug 'https://github.com/bluz71/vim-moonfly-colors'
+Plug 'https://github.com/bluz71/vim-moonfly-colors'
+
+
 Plug 'sonph/onehalf', {'rtf': 'vim/'}
 Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -61,6 +67,8 @@ Plug 'https://github.com/othree/html5.vim'
 Plug 'https://github.com/yuezk/vim-js'
 Plug 'https://github.com/tpope/vim-rails'
 Plug 'https://github.com/rust-lang/rust.vim'
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
+
 "" TypeScript and TSX support
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'

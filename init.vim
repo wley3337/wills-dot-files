@@ -20,7 +20,8 @@ sourc $HOME/.config/nvim/general/codingLanguageSettings.vim
 "" good site to look at color themes http://colorswat.ch/
 set t_Co=256
 set cursorline
-colorscheme palenight
+set background=dark
+colorscheme darkspace
 
 "" Terminal Settings
 "" start terminal in insert mode
