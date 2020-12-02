@@ -1,3 +1,4 @@
-autoload/plugged/*
-undodir/*.*
-general/node_modules
+nvim/autoload/plugged/*
+nvim/undodir/*.*
+nvim/general/node_modules
+
