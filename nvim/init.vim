@@ -1,21 +1,21 @@
 "" Sourced files for better organizeation
 " **** PLUGINS
-sourc $HOME/.config/wills-dotfiles/nvim/vim-plug/plugins.vim
+sourc $HOME/.config/wills-dot-files/nvim/vim-plug/plugins.vim
 " **** CONFIG/SETTINGS
-source $HOME/.config/wills-dotfiles/nvim/general/settings.vim
+source $HOME/.config/wills-dot-files/nvim/general/settings.vim
 " **** Keybindings
-source $HOME/.config/wills-dotfiles/nvim/general/keys/mappings.vim
+source $HOME/.config/wills-dot-files/nvim/general/keys/mappings.vim
 " **** NERDTree
-source $HOME/.config/wills-dotfiles/nvim/general/plugin-settings/nerdTree.vim
+source $HOME/.config/wills-dot-files/nvim/general/plugin-settings/nerdTree.vim
 " **** Rainbow
-source $HOME/.config/wills-dotfiles/nvim/general/plugin-settings/rainbow.vim
+source $HOME/.config/wills-dot-files/nvim/general/plugin-settings/rainbow.vim
 
 " **** Airline Theme Setting
-source $HOME/.config/wills-dotfiles/nvim/themes/airline.vim
+source $HOME/.config/wills-dot-files/nvim/themes/airline.vim
 
 "Language specific settings
 "ie: read svelte files as html
-sourc $HOME/.config/wills-dotfiles/nvim/general/codingLanguageSettings.vim
+sourc $HOME/.config/wills-dot-files/nvim/general/codingLanguageSettings.vim
 
 "" good site to look at color themes http://colorswat.ch/
 set t_Co=256
