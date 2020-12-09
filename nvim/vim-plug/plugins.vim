@@ -31,6 +31,10 @@ Plug 'https://github.com/drewtempelmeyer/palenight.vim' "palenight
 
 Plug 'https://github.com/bluz71/vim-moonfly-colors'
 
+"" Git Gutter
+"" HTML Tag Closing
+"" Prettier
+"" Eslint
 
 Plug 'sonph/onehalf', {'rtf': 'vim/'}
 Plug 'preservim/nerdtree' |
@@ -54,7 +58,6 @@ Plug 'https://github.com/RRethy/vim-illuminate'
 Plug 'https://github.com/ap/vim-css-color', { 'for': 'css' }
 Plug 'https://github.com/janko-m/vim-test'
 Plug 'https://github.com/rhysd/devdocs.vim'
-Plug 'https://github.com/tpope/vim-commentary'
 Plug 'https://github.com/tpope/vim-endwise'
 Plug 'https://github.com/tweekmonster/startuptime.vim'
 "
