@@ -2,8 +2,9 @@
 PATH=$HOME/bin:/usr/local/bin:$PATH
 source ~/.profile
 # Path to your oh-my-zsh installation.
-export ZSH="/home/will/.oh-my-zsh"
-
+#export ZSH="/home/will/.oh-my-zsh"
+# Mac path
+export ZSH="/Users/willley/.oh-my-zsh"
 # Set name of the theme to load --- if set to "random", it will load a
 # random theme each time oh-my-zsh is loaded, in which case, to know
 # which specific one was loaded, run: echo $RANDOM_THEME See
@@ -63,8 +64,10 @@ ZSH_THEME="agnoster"
 
 # Which plugins would you like to load? Standard plugins can be found in
 # $ZSH/plugins/ Custom plugins may be added to $ZSH_CUSTOM/plugins/
+plugins=(git autoswitch_virtualenv $plugins)
 
 source $ZSH/oh-my-zsh.sh
+
 
 # User configuration
 
@@ -101,6 +104,8 @@ alias nvimDir="cd ~/.config/wills-dot-files/"
 alias tConfig="nvim ~/.tmux.conf"
 alias vim="nvim"
 alias gcm="git commit -m "
+alias gap="git add -p "
+alias gs='git status'
 alias t="tmux"
 alias ta="t a -t"
 alias tls="t ls"
