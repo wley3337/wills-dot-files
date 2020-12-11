@@ -32,27 +32,28 @@ Plug 'https://github.com/drewtempelmeyer/palenight.vim' "palenight
 Plug 'https://github.com/bluz71/vim-moonfly-colors'
 
 "" Git Gutter
+Plug 'https://github.com/vim-scripts/vim-gitgutter'
 "" HTML Tag Closing
 "" Prettier
 "" Eslint
 
-Plug 'sonph/onehalf', {'rtf': 'vim/'}
-Plug 'preservim/nerdtree' |
+Plug 'https://github.com/sonph/onehalf', {'rtf': 'vim/'}
+Plug 'https://github.com/preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 "" Fuzzy finder
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+Plug 'https://github.com/junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'https://github.com/junegunn/fzf.vim'
 "" AirLine
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'https://github.com/vim-airline/vim-airline'
+Plug 'https://github.com/vim-airline/vim-airline-themes'
 "" Coc language server for auto complete
 "" Other language server settings -> https://github.com/neoclide/coc.nvim/wiki/Language-servers
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-python']
 
 "" Rainbow brackets
-Plug 'frazrepo/vim-rainbow'
+Plug 'https://github.com/frazrepo/vim-rainbow'
 "" === other === from https://github.com/devinrm/dotfiles/blob/trunk/config/nvim/init.vim
 Plug 'https://github.com/RRethy/vim-illuminate'
 Plug 'https://github.com/ap/vim-css-color', { 'for': 'css' }
@@ -73,6 +74,6 @@ Plug 'https://github.com/rust-lang/rust.vim'
 Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
 "" TypeScript and TSX support
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
+Plug 'https://github.com/leafgarland/typescript-vim'
+Plug 'https://github.com/peitalin/vim-jsx-typescript'
 call plug#end()
