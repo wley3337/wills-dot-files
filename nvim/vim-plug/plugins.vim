@@ -50,7 +50,6 @@ Plug 'https://github.com/vim-airline/vim-airline-themes'
 "" Coc language server for auto complete
 "" Other language server settings -> https://github.com/neoclide/coc.nvim/wiki/Language-servers
 Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-python']
 
 "" Rainbow brackets
 Plug 'https://github.com/frazrepo/vim-rainbow'

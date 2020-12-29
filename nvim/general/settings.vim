@@ -1,5 +1,4 @@
-let g:mapleader = "\<Space>"            " set leader key
-syntax enable                           " Enables syntax highlighing
+syntax on                           " Enables syntax highlighing
 
 set autochdir                          " Your working directory will always be the same as your working directory
 set autoindent                          " Good auto indent
@@ -12,25 +11,25 @@ set cursorcolumn                        " Enable highlighting of the current col
 set encoding=utf-8                      " The encoding displayed
 set expandtab                           " Converts tabs to spaces
 set fileencoding=utf-8                  " The encoding written to file
-set formatoptions-=cro                  " Stop newline continution of comments
+set formatoptions-=cro                  " Stop newline continuation of comments
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set history=1000                        " Increase the undo limit
 set hlsearch                            " Enable search highlighting
 set iskeyword+=-                      	" treat dash separated words as a word text object"
-set incsearch                           " incrimental search as you type
+set incsearch                           " incremental search as you type
 set laststatus=0                        " Always display the status line
 set list listchars=tab:»·,trail:·,nbsp:· " Display extra whitespace
 set mouse=a                             " Enable your mouse
 set matchtime=0                         " Speed up escape after (){} chars
 set nobackup                            " This is recommended by coc
-set nohlsearch                          " Turns highlighting search off after hitting entier"
+set nohlsearch                          " Turns highlighting search off after hitting enter"
 "set noshowmode                          " We don't need to see things like -- INSERT -- anymore
 "set nowrap                              " Display long lines as just one line
 set noswapfile                          " removes swap file
 set nowritebackup                       " This is recommended by coc
 set number                              " Line numbers
 set pumheight=10                        " Makes popup menu smaller
-set relativenumber                      " Show line number on current line iand relative numbers on all other lines
+set relativenumber                      " Show line number on current line and relative numbers on all other lines
 set ruler              			            " Show the cursor position all the time
 set scrolloff=3                         " show 5 lines above and below cursor
 set shiftwidth=2                        " Change the number of space characters inserted for indentation

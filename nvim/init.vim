@@ -1,20 +1,26 @@
+"" Set leader key to be sure that it loads before any other
+:let mapleader=" "
+
 "" Sourced files for better organizeation
-" **** PLUGINS
+"" PLUGINS
 sourc $HOME/.config/wills-dot-files/nvim/vim-plug/plugins.vim
-" **** CONFIG/SETTINGS
+
+"" CONFIG/SETTINGS
 source $HOME/.config/wills-dot-files/nvim/general/settings.vim
-" **** Keybindings
+"" Keybindings
 source $HOME/.config/wills-dot-files/nvim/general/keys/mappings.vim
-" **** NERDTree
+"" Coc-Settings
+source $HOME/.config/wills-dot-files/nvim/general/plugin-settings/cocSettings.vim
+"" NERDTree
 source $HOME/.config/wills-dot-files/nvim/general/plugin-settings/nerdTree.vim
-" **** Rainbow
+"" Rainbow
 source $HOME/.config/wills-dot-files/nvim/general/plugin-settings/rainbow.vim
 
-" **** Airline Theme Setting
+"" Airline Theme Setting
 source $HOME/.config/wills-dot-files/nvim/themes/airline.vim
 
-"Language specific settings
-"ie: read svelte files as html
+"" Language specific settings
+"" ie: read svelte files as html
 sourc $HOME/.config/wills-dot-files/nvim/general/codingLanguageSettings.vim
 
 "" good site to look at color themes http://colorswat.ch/
