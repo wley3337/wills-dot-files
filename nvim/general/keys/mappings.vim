@@ -1,6 +1,7 @@
 " Leader keys
 ":let mapleader=" " set in init.vim
 source $HOME/.config/wills-dot-files/nvim/general/keys/cocMappings.vim
+source $HOME/.config/wills-dot-files/nvim/general/keys/jsdocMappings.vim
 
 " Better nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")
@@ -50,10 +51,10 @@ nnoremap <C-l> <C-w>l
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
 "" === commentary ===
-nnoremap <C-\> :Commentary<CR>
-xnoremap <C-\> :Commentary<CR>
+nnoremap <leader>c :Commentary<CR>
+xnoremap <leader>c :Commentary<CR>
 "" Toggle
-nnoremap <silent> <leader>nt :NERDTreeToggle<CR>
+" nnoremap <silent> <leader>nt :NERDTreeToggle<CR>
 "" turn terminal to normal mode with escape
 tnoremap <Esc> <C-\><C-n>
 "" open terminal on ctrl+n

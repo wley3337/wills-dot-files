@@ -32,14 +32,20 @@ Plug 'https://github.com/drewtempelmeyer/palenight.vim' "palenight
 Plug 'https://github.com/bluz71/vim-moonfly-colors'
 
 "" Git Gutter
-Plug 'https://github.com/vim-scripts/vim-gitgutter'
+Plug 'https://github.com/airblade/vim-gitgutter'
 "" HTML Tag Closing
 "" Prettier
+" Covered by COC
 "" Eslint
+" Covered by COC
 
+Plug 'https://github.com/heavenshell/vim-jsdoc', {
+      \'for': ['javascript', 'javascript.jsx', 'typescript', ],
+      \ 'do': 'make install'
+      \}
 Plug 'https://github.com/sonph/onehalf', {'rtf': 'vim/'}
-Plug 'https://github.com/preservim/nerdtree' |
-            \ Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'https://github.com/preservim/nerdtree' |
+"             \ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 "" Fuzzy finder
 Plug 'https://github.com/junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -70,7 +76,9 @@ Plug 'https://github.com/othree/html5.vim'
 Plug 'https://github.com/yuezk/vim-js'
 Plug 'https://github.com/tpope/vim-rails'
 Plug 'https://github.com/rust-lang/rust.vim'
-Plug 'evanleck/vim-svelte', {'branch': 'main'}
+Plug 'https://github.com/elzr/vim-json'
+Plug 'https://github.com/jparise/vim-graphql'
+Plug 'https://github.com/evanleck/vim-svelte', {'branch': 'main'}
 
 "" TypeScript and TSX support
 Plug 'https://github.com/leafgarland/typescript-vim'

@@ -14,7 +14,6 @@ set fileencoding=utf-8                  " The encoding written to file
 set formatoptions-=cro                  " Stop newline continuation of comments
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set history=1000                        " Increase the undo limit
-set hlsearch                            " Enable search highlighting
 set iskeyword+=-                      	" treat dash separated words as a word text object"
 set incsearch                           " incremental search as you type
 set laststatus=0                        " Always display the status line
@@ -22,6 +21,7 @@ set list listchars=tab:»·,trail:·,nbsp:· " Display extra whitespace
 set mouse=a                             " Enable your mouse
 set matchtime=0                         " Speed up escape after (){} chars
 set nobackup                            " This is recommended by coc
+set noerrorbells                        " No audio bells for errors
 set nohlsearch                          " Turns highlighting search off after hitting enter"
 "set noshowmode                          " We don't need to see things like -- INSERT -- anymore
 "set nowrap                              " Display long lines as just one line
@@ -31,7 +31,7 @@ set number                              " Line numbers
 set pumheight=10                        " Makes popup menu smaller
 set relativenumber                      " Show line number on current line and relative numbers on all other lines
 set ruler              			            " Show the cursor position all the time
-set scrolloff=3                         " show 5 lines above and below cursor
+set scrolloff=5                         " show 5 lines above and below cursor
 set shiftwidth=2                        " Change the number of space characters inserted for indentation
 "" Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
