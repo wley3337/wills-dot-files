@@ -12,7 +12,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 Plug 'sheerun/vim-polyglot'
 " Auto pairs for '(' '[' '{'
 Plug 'jiangmiao/auto-pairs'
-
+" Vim Surround
+Plug 'https://github.com/tpope/vim-surround'
 "Tmux Plugin
 Plug 'christoomey/vim-tmux-navigator'
 "undo
@@ -31,8 +32,9 @@ Plug 'https://github.com/drewtempelmeyer/palenight.vim' "palenight
 
 Plug 'https://github.com/bluz71/vim-moonfly-colors'
 
-"" Git Gutter
+"" Git
 Plug 'https://github.com/airblade/vim-gitgutter'
+Plug 'https://tpope.io/vim/fugitive.git'
 "" HTML Tag Closing
 "" Prettier
 " Covered by COC

@@ -15,7 +15,15 @@
     "javascriptreact",
     "typescript.tsx"
   ],
-  "cSpell.userWords": ["CSRFTOKEN", "xsrf"],
+  "cSpell.userWords": [
+    "CSRFTOKEN",
+    "ukey",
+    "uuidv",
+    "xsrf"
+  ],
+  "explorer.icon.enableVimDevicons": true,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.position": "floating",
   "explorer.keyMappings.global": {
     "i": false, // cancel default mapkey
 

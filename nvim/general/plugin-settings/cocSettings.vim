@@ -7,5 +7,6 @@ let g:coc_global_extensions = [
       \'coc-prettier',
       \'coc-tsserver',
       \'coc-eslint',
-      \'coc-python'
+      \'coc-python',
+      \'coc-svelte'
       \]
