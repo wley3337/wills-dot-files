@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH. export
-PATH=$HOME/bin:/usr/local/bin:$PATH
+PATH=/usr/local/bin:$HOME/bin:$PATH
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
@@ -100,14 +100,11 @@ export EDITOR='nvim'
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases alias zshconfig="mate ~/.zshrc" alias ohmyzsh="mate
-# ~/.oh-my-zsh"
 alias zshrc="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias nvimConfig="nvim ~/.config/wills-dot-files/"
 alias nvimDir="cd ~/.config/wills-dot-files/"
 alias tConfig="nvim ~/.tmux.conf"
-alias vim="nvim"
 alias gcm="git commit -m "
 alias gap="git add -p "
 alias gs='git status'
@@ -121,9 +118,10 @@ alias tme="tmuxinator open "
 export GUILE_LOAD_PATH="/usr/local/share/guile/site/3.0"
 export GUILE_LOAD_COMPILED_PATH="/usr/local/lib/guile/3.0/site-ccache"
 export GUILE_SYSTEM_EXTENSIONS_PATH="/usr/local/lib/guile/3.0/extensions"
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && . "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
+# export NVM_DIR="$HOME/.nvm"
+#   [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && . "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
+#   [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+export NVM_DIR=~/.nvm
+ [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

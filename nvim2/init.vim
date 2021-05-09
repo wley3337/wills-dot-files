@@ -7,14 +7,14 @@ source $HOME/.config/wills-dot-files/nvim2/plugins/plugins.vim
 " Theme load before settings
 " good site to look at color themes http://colorswat.ch/
 set background=dark
+set termguicolors
 colorscheme darkspace
-
-" Key Mappings
-source $HOME/.config/wills-dot-files/nvim2/keys/index.vim
 
 " Settings
 source $HOME/.config/wills-dot-files/nvim2/settings/index.vim
 
+" Key Mappings
+source $HOME/.config/wills-dot-files/nvim2/keys/index.vim
 
 "Load LSPs
 
