@@ -27,3 +27,9 @@ augroup vimTrim
   autocmd BufWritePre * call s:TrimTrailingWhitespace()
   autocmd BufWritePre * call s:TrimBlankLines()
 augroup END
+
+" Auto format on save
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END

@@ -41,8 +41,8 @@ Plug 'https://github.com/heavenshell/vim-jsdoc', {
       \ 'do': 'make install'
       \}
 Plug 'https://github.com/sonph/onehalf', {'rtf': 'vim/'}
-" Plug 'https://github.com/preservim/nerdtree' |
-"             \ Plug 'Xuyuanp/nerdtree-git-plugin'
+"" Folding plugins
+Plug 'https://github.com/tmhedberg/SimpylFold'
 Plug 'ryanoasis/vim-devicons'
 "" Fuzzy finder
 Plug 'https://github.com/junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -85,6 +85,8 @@ Plug 'https://github.com/elzr/vim-json'
 Plug 'https://github.com/leafgarland/typescript-vim'
 Plug 'https://github.com/peitalin/vim-jsx-typescript'
 " Other
+Plug 'https://github.com/sbdchd/neoformat'
+Plug 'https://github.com/rhysd/vim-clang-format'
 Plug 'https://github.com/tpope/vim-rails'
 Plug 'https://github.com/rust-lang/rust.vim'
 Plug 'https://github.com/jparise/vim-graphql'

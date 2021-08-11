@@ -35,12 +35,13 @@ nnoremap <C-l> <C-w>l
 nnoremap <leader>c :Commentary<CR>
 xnoremap <leader>c :Commentary<CR>
 
-"" use alt+hjkl to move between split/vsplit panels
-tnoremap <A-h> <C-\><C-n><C-w>h
-tnoremap <A-j> <C-\><C-n><C-w>j
-tnoremap <A-k> <C-\><C-n><C-w>k
-tnoremap <A-l> <C-\><C-n><C-w>l
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
+" I believe this is covered by better window navigation
+" "" use alt+hjkl to move between split/vsplit panels
+" tnoremap <A-h> <C-\><C-n><C-w>h
+" tnoremap <A-j> <C-\><C-n><C-w>j
+" tnoremap <A-k> <C-\><C-n><C-w>k
+" tnoremap <A-l> <C-\><C-n><C-w>l
+" nnoremap <A-h> <C-w>h
+" nnoremap <A-j> <C-w>j
+" nnoremap <A-k> <C-w>k
+" nnoremap <A-l> <C-w>l

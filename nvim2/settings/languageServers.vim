@@ -6,6 +6,7 @@ lua << EOF
  require('lspconfig').tsserver.setup{on_attach=require'completion'.on_attach}
  require('lspconfig').pyls.setup{}
  require('lspconfig').ccls.setup{} 
+ require('lspconfig').clangd.setup{} 
 EOF
 
 " lang languageServers
