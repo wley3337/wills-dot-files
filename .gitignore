@@ -1,4 +1,5 @@
 nvim/autoload/plugged/*
 nvim/undodir/*.*
 nvim/general/node_modules
-
+node_modules/
+yarn*

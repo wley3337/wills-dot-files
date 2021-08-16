@@ -8,7 +8,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 " All plugins should go inside the call plug#begin/end
-" lsp - refferres to language server (protocal)
+" lsp - refferres to language server (protocal) 
 call plug#begin('~/.config/nvim/autoload/plugged')
 " Plugins from video
 Plug 'https://github.com/pangloss/vim-javascript'
@@ -17,14 +17,12 @@ Plug 'https://github.com/itchyny/vim-gitbranch' " light line uses this to pull b
 " Plug 'https://github.com/kassio/neoterm' " opens a terminal inside neo vim (persists through use)
 Plug 'https://github.com/szw/vim-maximizer' " maximize the current pane
 Plug 'https://github.com/janko/vim-test' " testing plugin - you can trigger the test for the file while writing in it
-" Telescope Plugins
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim' " allows for Lua functions to have access to system files
 Plug 'nvim-telescope/telescope.nvim' " fuzzy finder
-Plug 'nvim-telescope/telescope-fzy-native.nvim'
 " Plug 'https://github.com/nvim-telescope/telescope.nvim/vim-test' " testing plugin
 " " Better Syntax Support
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
 Plug 'https://github.com/jiangmiao/auto-pairs' " Auto pairs for '(' '[' '{'
 Plug 'https://github.com/tpope/vim-surround' " allows surrounding the highlighted code
 "Tmux Plugin
@@ -49,7 +47,7 @@ Plug 'https://github.com/airblade/vim-gitgutter' " adds space to the left of num
 Plug 'https://tpope.io/vim/fugitive.git' " support for git diff elements in the gutter
 
 " JS Doc string plugin
-Plug 'https://github.com/heavenshell/vim-jsdoc', {
+Plug 'https://github.com/heavenshell/vim-jsdoc', { 
       \'for': ['javascript', 'javascript.jsx', 'typescript', ],
       \ 'do': 'make install'
       \}
@@ -59,12 +57,12 @@ Plug 'https://github.com/heavenshell/vim-jsdoc', {
 " Plug 'ryanoasis/vim-devicons'
 " "" AirLine
 Plug 'https://github.com/vim-airline/vim-airline' " Airline ( info line at bottom/top of vim buffer )
-Plug 'https://github.com/vim-airline/vim-airline-themes' " Airline Themes
+Plug 'https://github.com/vim-airline/vim-airline-themes' " Airline Themes 
 
 " Language Server: (LSP)
 Plug 'https://github.com/neovim/nvim-lspconfig' " helps configure the native language servers
 " Plug 'https://github.com/hrsh7th/nvim-compe'
-Plug 'https://github.com/nvim-lua/completion-nvim' " gives you completion
+Plug 'https://github.com/nvim-lua/completion-nvim' " gives you completion 
 " "" Coc for explorer
 " Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'}
 "" Rainbow brackets
@@ -177,8 +175,8 @@ set undodir=~/.config/nvim/undodir      " sets an undo directory
 set undofile                            " makes an undo file for everything that you do
 
 filetype plugin indent on " file type for plug ins for indentation
-" set colors if available
-if (has("termguicolors"))
+" set colors if available 
+if (has("termguicolors")) 
   set termguicolors
 endif
 
@@ -199,8 +197,8 @@ colorscheme darkspace
 nnoremap <silent> <leader>m :MaximizerToggle!<CR>
 
 " Escape with jk or kj in quick succession
-inoremap jk <Esc>
-inoremap kj <Esc>
+inoremap jk <Esc> 
+inoremap kj <Esc> 
 
 " Move through soft-wrapped spaces
 nnoremap <expr> j v:count ? 'j' : 'gj'
@@ -210,8 +208,60 @@ nnoremap <expr> k v:count ? 'k' : 'gk'
 lua <<EOF
 -- local variables
  local nvim_lsp = require("lspconfig")
+
+-- overwrites nvim's format on save function. 
+  local format_async = function(err, _, result, _, bufnr)
+    if err ~= nil or result == nil then return end
+    if not vim.api.nvim_buf_get_option(bufnr, "modified") then
+        local view = vim.fn.winsaveview()
+        vim.lsp.util.apply_text_edits(result, bufnr)
+        vim.fn.winrestview(view)
+        if bufnr == vim.api.nvim_get_current_buf() then
+            vim.api.nvim_command("noautocmd :update")
+        end
+    end
+  end
+  vim.lsp.handlers["textDocument/formatting"] = format_async
+
+  _G.lsp_organize_imports = function()
+    local params = {
+      command = "_tpyescript.organizeImports",
+      arguments = {vim.api.nvim_buf_get_name(0)},
+      title = ""
+      }
+    vim.lsp.buf.execute_command(params)
+  end
+
+  local on_attach = function(client, bufnr)
+    vim.cmd("command! LspDef lua vim.lsp.buf.definition()")
+    vim.cmd("command! LspFormatting lua vim.lsp.buf.formatting()")
+    vim.cmd("command! LspCodeAction lua vim.lsp.buf.code_action()")
+    vim.cmd("command! LspHover lua vim.lsp.buf.hover()")
+    vim.cmd("command! LspRename lua vim.lsp.buf.rename()")
+    vim.cmd("command! LspOrganize lua lsp_organize_imports()")
+    vim.cmd("command! LspRefs lua vim.lsp.buf.references()")
+    vim.cmd("command! LspTypeDef lua vim.lsp.buf.type_definition()")
+    vim.cmd("command! LspImplementation lua vim.lsp.buf.implementation()")
+    vim.cmd("command! LspDiagPrev lua vim.lsp.diagnostic.goto_prev()")
+    vim.cmd("command! LspDiagNext lua vim.lsp.diagnostic.goto_next()")
+    vim.cmd("command! LspDiagLine lua vim.lsp.diagnostic.show_line_diagnostics()")
+    vim.cmd("command! LspSignatureHelp lua vim.lsp.buf.signature_help()")
+    if client.resolved_capabilities.document_formatting then
+          vim.api.nvim_exec([[
+           augroup LspAutocommands
+               autocmd! * <buffer>
+               autocmd BufWritePost <buffer> LspFormatting
+           augroup END
+           ]], true)
+      end
+  end
+
   -- JS, TS
-   nvim_lsp.tsserver.setup{ on_attach=require'completion'.on_attach  }
+   nvim_lsp.tsserver.setup{on_attach= function(client)
+      on_attach=require'completion'.on_attach  
+      client.resolved_capabilities.document_formatting=false
+      on_attach(client)
+   end}
 
    local filetypes={
     typescript = "eslint",
@@ -241,38 +291,15 @@ lua <<EOF
   local formatters={
     prettier={command = "prettier", args={"--stdin-filepath", "%filepath"}}
   }
-
+  
   local formatFileTypes={
     typescript = "prettier",
     typescriptreact = "prettier"
   }
-
-  local on_attach_diagnostic = function(client, bufnr)
-    vim.cmd("command! LspDef lua vim.lsp.buf.definition()")
-    vim.cmd("command! LspFormatting lua vim.lsp.buf.formatting()")
-    vim.cmd("command! LspCodeAction lua vim.lsp.buf.code_action()")
-    vim.cmd("command! LspHover lua vim.lsp.buf.hover()")
-    vim.cmd("command! LspRename lua vim.lsp.buf.rename()")
-    vim.cmd("command! LspOrganize lua lsp_organize_imports()")
-    vim.cmd("command! LspRefs lua vim.lsp.buf.references()")
-    vim.cmd("command! LspTypeDef lua vim.lsp.buf.type_definition()")
-    vim.cmd("command! LspImplementation lua vim.lsp.buf.implementation()")
-    vim.cmd("command! LspDiagPrev lua vim.lsp.diagnostic.goto_prev()")
-    vim.cmd("command! LspDiagNext lua vim.lsp.diagnostic.goto_next()")
-    vim.cmd("command! LspDiagLine lua vim.lsp.diagnostic.show_line_diagnostics()")
-    vim.cmd("command! LspSignatureHelp lua vim.lsp.buf.signature_help()")
-    if client.resolved_capabilities.document_formatting then
-          vim.api.nvim_exec([[
-           augroup LspAutocommands
-               autocmd! * <buffer>
-               autocmd BufWritePost <buffer> LspFormatting
-           augroup END
-           ]], true)
-      end
-  end
+ 
 -- Diagnostic ( Eslint_d )
   nvim_lsp.diagnosticls.setup{
-    on_attach=on_attach_diagnostic,
+    on_attach=on_attach,
     filetypes=vim.tbl_keys(filetypes),
     init_options={
       filetypes=filetypes,
@@ -283,9 +310,9 @@ lua <<EOF
   }
  -- python
   nvim_lsp.pylsp.setup{}
- -- c++
-  nvim_lsp.ccls.setup{}
-  nvim_lsp.clangd.setup{}
+ -- c++ 
+  nvim_lsp.ccls.setup{} 
+  nvim_lsp.clangd.setup{} 
 EOF
 
 """ Python settings for pyls
@@ -294,7 +321,7 @@ set completeopt -=preview
 autocmd Filetype python setlocal omnifunc=v:lua.vim.lsp.omnifunc
 """ End Python Settings
 
-" language server mapings
+" language server mapings 
 nnoremap <silent> ga <cmd>lua vim.lsp.buf.code_action()<CR>
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
@@ -347,6 +374,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_left_sep = '  '
 let g:airline_right_sep =   '  '
 " small version ''''
+
 " Switch to your current theme
 let g:airline_theme = 'pop_punk'
 
@@ -355,69 +383,3 @@ set showtabline=2
 
 " We don't need to see things like -- INSERT -- anymore
 " set noshowmode
-"
-" FUNCTIONS
-"" When editing a file, always jump to the last known cursor position.
-" Don't do it for commit messages, when the position is invalid, or when
-" inside an event handler.
-augroup vimrcEx
-  autocmd!
-  autocmd BufReadPost *
-        \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
-        \   exe "normal g`\"" |
-        \ endif
-augroup END
-
-" Trim trailing whitespace and extra lines
-function! s:TrimTrailingWhitespace()
-  let l:pos = getpos('.')
-  %s/\s\+$//e
-  call setpos('.', l:pos)
-endfunction
-
-function! s:TrimBlankLines()
-  let l:pos = getpos('.')
-  :silent! %s#\($\n\s*\)\+\%$##
-  call setpos('.', l:pos)
-endfunction
-
-augroup vimTrim
-  autocmd!
-  autocmd BufWritePre * call s:TrimTrailingWhitespace()
-  autocmd BufWritePre * call s:TrimBlankLines()
-augroup END
-
-" Auto format on save
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
-augroup END
-
-lua <<EOF
-local actions = require('telescope.actions')
-require('telescope').setup {
-  defaults = {
-    file_sorter = require('telescope.sorters').get_fzy_sorter,
-    prompt_prefix= ' >',
-    color_devicons = true,
-
-    file_previewer = require('telescope.previewers').vim_buffer_cat.new,
-    grep_previewer = require('telescope.previewers').vim_buffer_vimgrep.new,
-    qflist_previewer = require('telescope.previewers').vim_buffer_qflist.new,
-
-    mappings = {
-      i= {
-        ["<C-x>"]= false,
-        ["<C-q>"]= actions.send_to_qflist,
-        }
-      }
-    },
-  extensions= {
-    fzy_native = {
-      override_generic_sorter = false,
-      override_file_sorter = true
-      }
-    }
-  }
-require('telescope').load_extension('fzy_native')
-EOF
