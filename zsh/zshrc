@@ -114,7 +114,7 @@ alias tls="t ls"
 alias tn="t new -t"
 alias tm="tmuxinator "
 alias tme="tmuxinator open "
-
+alias logger="pino-pretty --colorize --translateTime='SYS:HH:MM:ss.l' --ignore=hostname,pid -k payload"
 export GUILE_LOAD_PATH="/usr/local/share/guile/site/3.0"
 export GUILE_LOAD_COMPILED_PATH="/usr/local/lib/guile/3.0/site-ccache"
 export GUILE_SYSTEM_EXTENSIONS_PATH="/usr/local/lib/guile/3.0/extensions"
