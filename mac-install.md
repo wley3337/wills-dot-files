@@ -10,6 +10,8 @@
 
 - Install Iterm2 ( this will also install `zsh` )
   - copy zsh aliases to `~/.zshrc` ( only bring alliases because the pathing may be different on different OS)
+- Install [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts#glyph-sets)
+- Install [Powerline Fonts](https://github.com/powerline/fonts)
 - [oh-my-zsh](https://ohmyz.sh/#install)
   - copy the custom-agnoster setup to `~/.oh-my-zsh/custom/themes`
   - you'll also need Powerline fonts to make that them work
