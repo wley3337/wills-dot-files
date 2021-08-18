@@ -6,7 +6,8 @@
   - python `brew install python` ( also installs pip )
   - nvim `brew install nvim`
   - yarn `brew install yarn`
-
+  
+- prettier `yarn global add prettier`
 
 - Install Iterm2 ( this will also install `zsh` )
   - copy zsh aliases to `~/.zshrc` ( only bring alliases because the pathing may be different on different OS)
