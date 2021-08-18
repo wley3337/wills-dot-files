@@ -1,3 +1,4 @@
+" testing git settings
 " last bit of video to watch : https://www.youtube.com/watch?v=-AZUIL1rY3U
 " auto-install vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
