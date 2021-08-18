@@ -3,6 +3,7 @@
 - Install Homebrew
   - git `brew install git`
     - add ssh key to github
+    - `git config --global --edit` to set your commit name and email
   - python `brew install python` ( also installs pip )
   - nvim `brew install nvim`
   - yarn `brew install yarn`
