@@ -29,13 +29,15 @@
   - `yarn global add eslint_d` <-- blog said this was faster than eslint :shrug:
   - `yarn global add diagnostic-languageserver`
     C++ server
-  - [Github link for ccls C++](https://github.com/MaskRay/ccls/wiki/Install) this is the language server for C++. I ended up using the official repo in the package manager ( gui add/remove software)
+  - [Github link for ccls C++](https://github.com/MaskRay/ccls/wiki/Install) You can install this with `brew install ccls`
+  - clangd add `/usr/local/opt/llvm/bin/` to your path and this will bring the native version in.
 - brew install nvim ( language servers require at least nvim='^=.50')
 
 ## Nvim currently in use is `/nvim3` all in one file and annotated
 
 - May need to create an undo dir. file path in current `init.vim` is: `~/.config/nvim/undodir`
 - `:checkhealth` is great to run after first installing nvim and after each mod to the init file.
+- need to run `yarn global add neovim` and `pip3 install pynvim` to connect your node version and your python version to NeoVim
 
-- I like to keep the init file in a repo and source the file from `./config/nvim/init.vim`. I can keep the file in a repo and push/pull changes across machines
+- I like to keep the init file in a repo and source the file from `./config/nvim/init.vim`. I can keep the file in a repo and push/pull changes across machines. The command for this usually is the following however your path to the repo may very: `source $HOME/.config/wills-dot-files/nvim3/init.vim`
 
