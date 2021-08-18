@@ -17,8 +17,6 @@
   - copy the custom-agnoster setup to `~/.oh-my-zsh/custom/themes`
   - you'll also need Powerline fonts to make that them work
 
-
-*** below is coppied from the linux install. Still in progress and will update as I go
 - install language servers
   Python server
   - `pip install 'python-lsp-server[all]`
