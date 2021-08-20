@@ -40,3 +40,16 @@
 
 - I like to keep the init file in a repo and source the file from `./config/nvim/init.vim`. I can keep the file in a repo and push/pull changes across machines. The command for this usually is the following however your path to the repo may very: `source $HOME/.config/wills-dot-files/nvim3/init.vim`
 
+## Post Install
+
+### Python
+- Install `pip install virtualenv`
+- Install zsh plugin [auto-switch-virtual-env](https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv)
+**Note: When you're in a virtual env you'll need to also `pip install nvim` if you don't want to add it to your requirements.txt. If you don't you'll get an error vim-spectore requires vim compiled with python 3.^**
+
+### Postgres
+- `brew install postgresql`
+- Down load view ( opt ) [sequal pro](https://sequelpro.com/)
+
+### Heroku CLI
+
