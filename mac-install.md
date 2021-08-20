@@ -48,6 +48,7 @@
 **Note: When you're in a virtual env you'll need to also `pip install nvim` if you don't want to add it to your requirements.txt. If you don't you'll get an error vim-spectore requires vim compiled with python 3.^**
 
 ### Postgres
+[Great walkthrough](https://dyclassroom.com/howto-mac/how-to-install-postgres-app-to-use-postgresql-database-on-mac)
 - `brew install postgresql`
 - Down load view ( opt ) [sequal pro](https://sequelpro.com/) ( didn't realize that this is more for docer based dbs couldn't get it to view the local postgresdb )
 - Grabed [PGAdmin](https://www.postgresql.org/ftp/pgadmin/pgadmin4/v5.6/macos/) to use for PostgreSQL
