@@ -49,7 +49,8 @@
 
 ### Postgres
 - `brew install postgresql`
-- Down load view ( opt ) [sequal pro](https://sequelpro.com/)
+- Down load view ( opt ) [sequal pro](https://sequelpro.com/) ( didn't realize that this is more for docer based dbs couldn't get it to view the local postgresdb )
+- Grabed [PGAdmin](https://www.postgresql.org/ftp/pgadmin/pgadmin4/v5.6/macos/) to use for PostgreSQL
 
 ### Heroku CLI
 
