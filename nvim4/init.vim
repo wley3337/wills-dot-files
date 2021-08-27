@@ -12,24 +12,16 @@ endif
 " lsp - refferres to language server (protocal)
 call plug#begin('~/.config/nvim/autoload/plugged')
 " Plugins from video
-Plug 'https://github.com/pangloss/vim-javascript'
-" Plug 'https://github.com/itchyny/lightline.vim' " airline alt
-Plug 'https://github.com/itchyny/vim-gitbranch' " light line uses this to pull branch info
 " Plug 'https://github.com/kassio/neoterm' " opens a terminal inside neo vim (persists through use)
 Plug 'https://github.com/szw/vim-maximizer' " maximize the current pane
-Plug 'https://github.com/janko/vim-test' " testing plugin - you can trigger the test for the file while writing in it
+
 " Telescope Plugins
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim' " allows for Lua functions to have access to system files
 Plug 'nvim-telescope/telescope.nvim' " fuzzy finder
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
-" Plug 'https://github.com/nvim-telescope/telescope.nvim/vim-test' " testing plugin
-" " Better Syntax Support
-Plug 'sheerun/vim-polyglot'
-Plug 'https://github.com/jiangmiao/auto-pairs' " Auto pairs for '(' '[' '{'
-Plug 'https://github.com/tpope/vim-surround' " allows surrounding the highlighted code
-"Tmux Plugin
-Plug 'christoomey/vim-tmux-navigator'
+
+Plug 'christoomey/vim-tmux-navigator' "Tmux Plugin
 " Plug 'mbbill/undotree'
 Plug 'https://github.com/tpope/vim-commentary' " comments out lines of code in visual mode
 
@@ -48,6 +40,7 @@ Plug 'https://github.com/yuqio/vim-darkspace' "darkspace used in for neovim
 "" Git
 Plug 'https://github.com/airblade/vim-gitgutter' " adds space to the left of number line for icons
 Plug 'https://tpope.io/vim/fugitive.git' " support for git diff elements in the gutter
+Plug 'https://github.com/itchyny/vim-gitbranch' " light line uses this to pull branch info
 
 " JS Doc string plugin
 Plug 'https://github.com/heavenshell/vim-jsdoc', {
@@ -58,32 +51,45 @@ Plug 'https://github.com/heavenshell/vim-jsdoc', {
 " "" Folding plugins
 " Plug 'https://github.com/tmhedberg/SimpylFold'
 " Plug 'ryanoasis/vim-devicons'
-" "" AirLine
+
+"" AirLine
 Plug 'https://github.com/vim-airline/vim-airline' " Airline ( info line at bottom/top of vim buffer )
 Plug 'https://github.com/vim-airline/vim-airline-themes' " Airline Themes
+" Plug 'https://github.com/itchyny/lightline.vim' " airline alt
 
 " Language Server: (LSP)
 Plug 'https://github.com/neovim/nvim-lspconfig' " helps configure the native language servers
-" Plug 'https://github.com/hrsh7th/nvim-compe'
-Plug 'https://github.com/nvim-lua/completion-nvim' " gives you completion
-" "" Coc for explorer
-" Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'}
-"" Rainbow brackets
+Plug 'https://github.com/hrsh7th/nvim-compe'
+" Snipets
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
+
+"Plug 'https://github.com/nvim-lua/completion-nvim' " gives you completion
+
+"" Coc for explorer
+Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'https://github.com/tpope/vim-surround' " allows surrounding the highlighted code
+Plug 'https://github.com/jiangmiao/auto-pairs' " Auto pairs for '(' '[' '{'
 Plug 'https://github.com/frazrepo/vim-rainbow' "colorizes paired brackets
+Plug 'https://github.com/windwp/nvim-ts-autotag' " auto completes html type tags
+
 " "" === other === from https://github.com/devinrm/dotfiles/blob/trunk/config/nvim/init.vim
 " Plug 'https://github.com/RRethy/vim-illuminate'
-" " testRunnner
-" Plug 'https://github.com/janko-m/vim-test'
-" debugger
-Plug 'https://github.com/puremourning/vimspector'
+
+"" Testing and Debugging
+Plug 'https://github.com/janko/vim-test' " testing plugin - you can trigger the test for the file while writing in it
+Plug 'https://github.com/puremourning/vimspector' " debugger
 
 " Plug 'https://github.com/rhysd/devdocs.vim'
 " Plug 'https://github.com/tpope/vim-endwise'
 " Plug 'https://github.com/tweekmonster/startuptime.vim'
 " "
 " " === language plugins ===
-" Some of these may no longer be needed. Left commented so I can pull them
-" in as needed
+" Some of these may no longer be needed. Left commented so I can pull them in as needed
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+Plug 'nvim-treesitter/playground'
+"Plug 'sheerun/vim-polyglot' " Better Syntax Support
 " "HTML
 " Plug 'https://github.com/othree/html5.vim'
 " " CSS
@@ -92,13 +98,14 @@ Plug 'https://github.com/puremourning/vimspector'
 " " MD
 " " Plug 'https://github.com/iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 " " JS
-" Plug 'https://github.com/maxmellon/vim-jsx-pretty'
-" Plug 'https://github.com/yuezk/vim-js'
-" Plug 'https://github.com/elzr/vim-json'
+"Plug 'https://github.com/pangloss/vim-javascript'
+"Plug 'https://github.com/maxmellon/vim-jsx-pretty'
+"Plug 'https://github.com/yuezk/vim-js'
+"Plug 'https://github.com/elzr/vim-json'
 
 " TypeScript and TSX support
-" Plug 'https://github.com/leafgarland/typescript-vim'
-" Plug 'https://github.com/peitalin/vim-jsx-typescript'
+"Plug 'https://github.com/leafgarland/typescript-vim'
+"Plug 'https://github.com/peitalin/vim-jsx-typescript'
 
 " " Prettier
 " post install (yarn install | npm install) then load plugin only for editing supported files
@@ -108,7 +115,7 @@ Plug 'prettier/vim-prettier', {
 
 " Other
 Plug 'https://github.com/sbdchd/neoformat' " formats source code
-" Plug 'https://github.com/rhysd/vim-clang-format'
+Plug 'https://github.com/rhysd/vim-clang-format'
 " Plug 'https://github.com/tpope/vim-rails'
 " Plug 'https://github.com/rust-lang/rust.vim'
 " Plug 'https://github.com/jparise/vim-graphql'
@@ -194,8 +201,37 @@ let g:markdown_fenced_languages = ['javascript', 'js=javascript', 'json=javascri
 set background=dark
 colorscheme darkspace
 
-" Key Bindings
+"Coc-Explorere
+nnoremap <space>e :CocCommand explorer --preset floating<CR>
+let g:coc_explorer_global_presets = {
+\   'floating': {
+\     'position': 'floating',
+\     'open-action-strategy': 'sourceWindow',
+\   },
+\   'floatingTop': {
+\     'position': 'floating',
+\     'floating-position': 'center-top',
+\     'open-action-strategy': 'sourceWindow',
+\   },
+\   'floatingLeftside': {
+\     'position': 'floating',
+\     'floating-position': 'left-center',
+\     'floating-width': 50,
+\     'open-action-strategy': 'sourceWindow',
+\   },
+\   'floatingRightside': {
+\     'position': 'floating',
+\     'floating-position': 'right-center',
+\     'floating-width': 50,
+\     'open-action-strategy': 'sourceWindow',
+\   },
+\ }
 
+" Key Bindings
+" TAB in normal mode will move to text buffer
+nnoremap <TAB> :bnext<CR>
+" SHIFT-TAB will go back
+nnoremap <S-TAB> :bprevious<CR>
 " szw/vim-maximizer
 nnoremap <silent> <leader>m :MaximizerToggle!<CR>
 
@@ -206,13 +242,37 @@ inoremap kj <Esc>
 " Move through soft-wrapped spaces
 nnoremap <expr> j v:count ? 'j' : 'gj'
 nnoremap <expr> k v:count ? 'k' : 'gk'
+" Treesitter settings
+lua require'nvim-treesitter.configs'.setup{ highlight = {enable = true} }
 
 " Language Server settings
 lua <<EOF
 -- local variables
+ -- Follows the blog here: https://jose-elias-alvarez.medium.com/configuring-neovims-lsp-client-for-typescript-development-5789d58ea9c
  local nvim_lsp = require("lspconfig")
-  -- JS, TS
-   nvim_lsp.tsserver.setup{ on_attach=require'completion'.on_attach  }
+
+  local format_async = function(err, _, result, _, bufnr)
+      if err ~= nil or result == nil then return end
+      if not vim.api.nvim_buf_get_option(bufnr, "modified") then
+          local view = vim.fn.winsaveview()
+          vim.lsp.util.apply_text_edits(result, bufnr)
+          vim.fn.winrestview(view)
+          if bufnr == vim.api.nvim_get_current_buf() then
+              vim.api.nvim_command("noautocmd :update")
+          end
+      end
+  end
+
+  vim.lsp.handlers["textDocument/formatting"] = format_async
+
+  _G.lsp_organize_imports = function()
+      local params = {
+          command = "_typescript.organizeImports",
+          arguments = {vim.api.nvim_buf_get_name(0)},
+          title = ""
+      }
+      vim.lsp.buf.execute_command(params)
+  end
 
    local filetypes={
     typescript = "eslint",
@@ -248,7 +308,7 @@ lua <<EOF
     typescriptreact = "prettier"
   }
 
-  local on_attach_diagnostic = function(client, bufnr)
+  local on_attach = function(client, bufnr)
     vim.cmd("command! LspDef lua vim.lsp.buf.definition()")
     vim.cmd("command! LspFormatting lua vim.lsp.buf.formatting()")
     vim.cmd("command! LspCodeAction lua vim.lsp.buf.code_action()")
@@ -271,9 +331,16 @@ lua <<EOF
            ]], true)
       end
   end
+-- JS, TS
+  nvim_lsp.tsserver.setup{
+    on_attach= function(client)
+    client.resolved_capabilities.document_formatting = false
+    on_attach(client)
+    end
+      }
 -- Diagnostic ( Eslint_d )
   nvim_lsp.diagnosticls.setup{
-    on_attach=on_attach_diagnostic,
+    on_attach=on_attach,
     filetypes=vim.tbl_keys(filetypes),
     init_options={
       filetypes=filetypes,
@@ -287,6 +354,47 @@ lua <<EOF
  -- c++
   nvim_lsp.ccls.setup{}
   nvim_lsp.clangd.setup{}
+
+EOF
+
+"vim-vsnip and nvim-compe setup
+lua <<EOF
+  -- use .ts snippets in .tsx files
+  vim.g.vsnip_filetypes = {
+      typescriptreact = {"typescript"}
+  }
+
+  require"compe".setup {
+      preselect = "always",
+      source = {
+          path = true,
+          buffer = true,
+          vsnip = true,
+          nvim_lsp = true,
+          nvim_lua = true
+      }
+  }
+
+  local t = function(str)
+      return vim.api.nvim_replace_termcodes(str, true, true, true)
+  end
+
+  _G.tab_complete = function()
+      if vim.fn.pumvisible() == 1 then
+          return vim.fn["compe#confirm"]()
+      elseif vim.fn.call("vsnip#available", {1}) == 1 then
+          return t("<Plug>(vsnip-expand-or-jump)")
+      else
+          return t("<Tab>")
+      end
+  end
+
+  vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
+  vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
+  vim.api.nvim_set_keymap("i", "<C-Space>", "compe#complete()", {expr = true, silent = true})
+  vim.api.nvim_set_keymap("i", "<CR>", [[compe#confirm("<CR>")]], {expr = true, silent = true})
+  vim.api.nvim_set_keymap("i", "<C-e>", [[compe#close("<C-e>")]], {expr = true, silent = true})
+
 EOF
 
 """ Python settings for pyls
@@ -336,21 +444,76 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
-" enable tabline
+" upper tabline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = '  '
 let g:airline#extensions#tabline#left_alt_sep = '  '
-let g:airline#extensions#tabline#right_sep = '  '
-let g:airline#extensions#tabline#right_alt_sep = '  '
+let g:airline#extensions#tabline#right_sep = ' '
+let g:airline#extensions#tabline#right_alt_sep = ' '
 
+" lower airline
 " enable powerline fonts
 let g:airline_powerline_fonts = 1
-let g:airline_left_sep = '  '
-let g:airline_right_sep =   '  '
+let g:airline_symbols_ascii=1
+let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]' "doesn't display utf unless it's not utf-8
+let g:airline_stl_path_style = 'short' "display short path in status line
+"let g:airline_section_c_only_filename=1
+let g:airline_left_sep = ''
+let g:airline_right_sep =   ''
 " small version ''''
 " Switch to your current theme
 let g:airline_theme = 'pop_punk'
 
+  if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+  endif
+" all default symbols for airline
+  " unicode symbols
+  let g:airline_left_sep = '»'
+  let g:airline_left_sep = '▶'
+  let g:airline_right_sep = '«'
+  let g:airline_right_sep = '◀'
+  let g:airline_symbols.colnr = ' ㏇:'
+  let g:airline_symbols.colnr = ' ℅:'
+  let g:airline_symbols.crypt = '🔒'
+  let g:airline_symbols.linenr = '☰'
+  let g:airline_symbols.linenr = ' ␊ '
+  let g:airline_symbols.linenr = ' ␤ '
+  let g:airline_symbols.linenr = '¶'
+  let g:airline_symbols.maxlinenr = ''
+  let g:airline_symbols.maxlinenr = '㏑'
+  let g:airline_symbols.branch = '⎇'
+  let g:airline_symbols.paste = 'ρ'
+  let g:airline_symbols.paste = 'Þ'
+  let g:airline_symbols.paste = '∥'
+  let g:airline_symbols.spell = 'Ꞩ'
+  let g:airline_symbols.notexists = 'Ɇ'
+  let g:airline_symbols.whitespace = 'Ξ'
+
+  " powerline symbols
+  let g:airline_left_sep = ''
+  let g:airline_left_alt_sep = ''
+  let g:airline_right_sep = ''
+  let g:airline_right_alt_sep = ''
+  let g:airline_symbols.branch = ''
+  "let g:airline_symbols.colnr = ' :'
+  let g:airline_symbols.colnr = ' C:'
+  let g:airline_symbols.readonly = ''
+  "let g:airline_symbols.linenr = ' :'
+  let g:airline_symbols.linenr = ' L:'
+  "let g:airline_symbols.maxlinenr = '☰ '
+  let g:airline_symbols.maxlinenr = ' '
+  let g:airline_symbols.dirty=' ⚡'
+
+  " old vim-powerline symbols
+  let g:airline_left_sep = '⮀'
+  let g:airline_left_alt_sep = '⮁'
+  let g:airline_right_sep = '⮂'
+  let g:airline_right_alt_sep = '⮃'
+  let g:airline_symbols.branch = '⭠'
+  let g:airline_symbols.readonly = '⭤'
+  "let g:airline_symbols.linenr = '⭡ '
+  let g:airline_symbols.linenr = ' ⭡ '
 
 "
 " FUNCTIONS
