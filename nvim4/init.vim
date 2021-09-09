@@ -437,6 +437,17 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>c :Commentary<CR>
 xnoremap <leader>c :Commentary<CR>
 
+"" vim-spector
+" launches vimspector
+nnoremap <leader>ds :call vimspector#Launch()<CR>
+"move to next breakpoint vimspector
+nnoremap <leader>dc :call vimspector#Continue()<CR>
+"quits vimspector
+nnoremap <leader>de :call vimspector#Reset()<CR>
+
+nmap <leader>drc <Plug>VimspectorRunToCursor
+nmap <leader>db <Plug>VimspectorToggleBreakpoint
+
 "" air-line
 let g:airline_powerline_fonts = 1
 
