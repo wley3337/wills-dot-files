@@ -243,7 +243,7 @@ inoremap kj <Esc>
 nnoremap <expr> j v:count ? 'j' : 'gj'
 nnoremap <expr> k v:count ? 'k' : 'gk'
 " Treesitter settings
-lua require'nvim-treesitter.configs'.setup{ highlight = {enable = true} }
+lua require'nvim-treesitter.configs'.setup{ highlight = {enable = true}, autotag = {enable = true} }
 
 " Language Server settings
 lua <<EOF
